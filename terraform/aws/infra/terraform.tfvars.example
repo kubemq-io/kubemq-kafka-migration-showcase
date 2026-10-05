@@ -1,0 +1,22 @@
+# Copy to terraform.tfvars and edit. Never commit terraform.tfvars.
+# operator_cidr is written separately by scripts/operator-cidr.sh into
+# operator.auto.tfvars; set it here only if you skip that script.
+
+region       = "us-east-1"
+preferred_az = "us-east-1a" # i4i.2xlarge must be offered here (plan fails otherwise)
+# aws_profile = "my-profile"
+
+# From versions.env (KAFKA_VERSION / KAFKA_SHA512).
+kafka_version = "4.3.1"
+# kafka_version and kafka_sha512 are passed by `make infra-up` from versions.env.
+# Set them here only when running terraform directly:
+# kafka_sha512  = "<sha512 of kafka_2.13-4.3.1.tgz>"
+
+# operator_cidr = "203.0.113.10/32"
+
+name_prefix          = "kmq-showcase"
+ssh_public_key_path  = "~/.ssh/id_ed25519.pub"
+ssh_private_key_path = "~/.ssh/id_ed25519"
+
+# use_spot is accepted but ignored on AWS (i4i brokers are always on-demand).
+use_spot = false

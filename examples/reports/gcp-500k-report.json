@@ -1,0 +1,1494 @@
+{
+  "contract_version": 3,
+  "run_id": "70de6753bec42fa136fdd61b7489387c",
+  "plan_hash": "afdc5c6cb67e7a6e2656b1ccddc6aeef7d8d849087eff0c21c20b911a78b7b7b",
+  "report_file": "/state/report-3.json",
+  "generated_at": "2026-10-04T14:12:08.367719477Z",
+  "source": {
+    "cluster_id": "dtln_1K0VuCVbSYHy7B0GQ",
+    "topics": {
+      "audit": {
+        "creation_id": "eP3mJkvCSrm/mAD7S8sxzQ==",
+        "partition_count": 6
+      },
+      "clicks": {
+        "creation_id": "DCM8gNRzRb+vlHmKq1H6dg==",
+        "partition_count": 6
+      },
+      "inventory": {
+        "creation_id": "Q6bmb/BSQmeS9wYxcoP3Zw==",
+        "partition_count": 6
+      },
+      "invoices": {
+        "creation_id": "Y/3lMEpASRGK2lDpJY8jNA==",
+        "partition_count": 6
+      },
+      "notifications": {
+        "creation_id": "kRpjq7J2QU2f5zSHXMZdqw==",
+        "partition_count": 6
+      },
+      "orders": {
+        "creation_id": "f0JqRZDARaCK34U8SKBbDw==",
+        "partition_count": 6
+      },
+      "payments": {
+        "creation_id": "UjJZFgxrTRS/iIb/S0iXbQ==",
+        "partition_count": 6
+      },
+      "sensors": {
+        "creation_id": "NApdkPMLQi2K5Bb88ij18w==",
+        "partition_count": 6
+      },
+      "shipments": {
+        "creation_id": "VQ7wO00oSkGq/wXYRLtbrw==",
+        "partition_count": 6
+      },
+      "users": {
+        "creation_id": "Rl84Ynw9QU2lwtPfXdPaow==",
+        "partition_count": 6
+      }
+    }
+  },
+  "target": {
+    "deployment_id": "62285d4a-d421-448e-8d12-2dc6e7018d50",
+    "kafka_cluster_id": "kubemq",
+    "brokers": {
+      "1": {
+        "kafka_address": "kubemq-0.kubemq.kubemq.svc.cluster.local:9092",
+        "data_volume_id": "7dbf9d9d-8807-4179-8dad-ee1f1f818c2a"
+      },
+      "2": {
+        "kafka_address": "kubemq-1.kubemq.kubemq.svc.cluster.local:9092",
+        "data_volume_id": "ae2e9fd0-965f-4315-908d-3af3ce1c2048"
+      },
+      "3": {
+        "kafka_address": "kubemq-2.kubemq.kubemq.svc.cluster.local:9092",
+        "data_volume_id": "a4b76252-56c3-4e6f-906d-716cca5d95ae"
+      }
+    },
+    "topics": {
+      "audit": {
+        "creation_id": "fa49b922-bf63-459f-bc5d-f6b827d1928b",
+        "partition_count": 6
+      },
+      "clicks": {
+        "creation_id": "7aff0bc6-f78e-4d32-a82d-a27d67a5733f",
+        "partition_count": 6
+      },
+      "inventory": {
+        "creation_id": "d0ce8743-b076-43aa-9ee6-abc285168be5",
+        "partition_count": 6
+      },
+      "invoices": {
+        "creation_id": "a7ea119f-a8b7-4994-8b5e-abfda7c1663d",
+        "partition_count": 6
+      },
+      "notifications": {
+        "creation_id": "7cef0d5b-9087-43f8-9e9f-33d6b66a9449",
+        "partition_count": 6
+      },
+      "orders": {
+        "creation_id": "b5d8c680-42ab-4014-a4de-0f61b3610bdb",
+        "partition_count": 6
+      },
+      "payments": {
+        "creation_id": "7d0fbdf2-e13d-4451-b241-2e0e378208ff",
+        "partition_count": 6
+      },
+      "sensors": {
+        "creation_id": "7c66106d-f4ff-4e76-8017-6fd5c8ba9436",
+        "partition_count": 6
+      },
+      "shipments": {
+        "creation_id": "aa33a501-a972-46c5-aaed-7e82d3884dc3",
+        "partition_count": 6
+      },
+      "users": {
+        "creation_id": "52348f5a-7d25-4af4-93c4-12ca40f50fb5",
+        "partition_count": 6
+      }
+    }
+  },
+  "groups": [
+    "analytics",
+    "billing",
+    "archiver"
+  ],
+  "applications": [
+    {
+      "name": "showcase-consumer",
+      "revision": "git:0000000"
+    }
+  ],
+  "partitions": [
+    {
+      "topic": "audit",
+      "partition": 0,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8309
+    },
+    {
+      "topic": "audit",
+      "partition": 1,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8119
+    },
+    {
+      "topic": "audit",
+      "partition": 2,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8249
+    },
+    {
+      "topic": "audit",
+      "partition": 3,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8429
+    },
+    {
+      "topic": "audit",
+      "partition": 4,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8519
+    },
+    {
+      "topic": "audit",
+      "partition": 5,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8369
+    },
+    {
+      "topic": "clicks",
+      "partition": 0,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8179
+    },
+    {
+      "topic": "clicks",
+      "partition": 1,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 7939
+    },
+    {
+      "topic": "clicks",
+      "partition": 2,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8559
+    },
+    {
+      "topic": "clicks",
+      "partition": 3,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8909
+    },
+    {
+      "topic": "clicks",
+      "partition": 4,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 7979
+    },
+    {
+      "topic": "clicks",
+      "partition": 5,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8429
+    },
+    {
+      "topic": "inventory",
+      "partition": 0,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8799
+    },
+    {
+      "topic": "inventory",
+      "partition": 1,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8229
+    },
+    {
+      "topic": "inventory",
+      "partition": 2,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8239
+    },
+    {
+      "topic": "inventory",
+      "partition": 3,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 7969
+    },
+    {
+      "topic": "inventory",
+      "partition": 4,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8849
+    },
+    {
+      "topic": "inventory",
+      "partition": 5,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 7909
+    },
+    {
+      "topic": "invoices",
+      "partition": 0,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8539
+    },
+    {
+      "topic": "invoices",
+      "partition": 1,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 7819
+    },
+    {
+      "topic": "invoices",
+      "partition": 2,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8389
+    },
+    {
+      "topic": "invoices",
+      "partition": 3,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 7919
+    },
+    {
+      "topic": "invoices",
+      "partition": 4,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8829
+    },
+    {
+      "topic": "invoices",
+      "partition": 5,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8499
+    },
+    {
+      "topic": "notifications",
+      "partition": 0,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8669
+    },
+    {
+      "topic": "notifications",
+      "partition": 1,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8599
+    },
+    {
+      "topic": "notifications",
+      "partition": 2,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8269
+    },
+    {
+      "topic": "notifications",
+      "partition": 3,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 7639
+    },
+    {
+      "topic": "notifications",
+      "partition": 4,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8619
+    },
+    {
+      "topic": "notifications",
+      "partition": 5,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8199
+    },
+    {
+      "topic": "orders",
+      "partition": 0,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8659
+    },
+    {
+      "topic": "orders",
+      "partition": 1,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8319
+    },
+    {
+      "topic": "orders",
+      "partition": 2,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8439
+    },
+    {
+      "topic": "orders",
+      "partition": 3,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8019
+    },
+    {
+      "topic": "orders",
+      "partition": 4,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8409
+    },
+    {
+      "topic": "orders",
+      "partition": 5,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8149
+    },
+    {
+      "topic": "payments",
+      "partition": 0,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8359
+    },
+    {
+      "topic": "payments",
+      "partition": 1,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8499
+    },
+    {
+      "topic": "payments",
+      "partition": 2,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 7809
+    },
+    {
+      "topic": "payments",
+      "partition": 3,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8099
+    },
+    {
+      "topic": "payments",
+      "partition": 4,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8309
+    },
+    {
+      "topic": "payments",
+      "partition": 5,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8919
+    },
+    {
+      "topic": "sensors",
+      "partition": 0,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8719
+    },
+    {
+      "topic": "sensors",
+      "partition": 1,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8009
+    },
+    {
+      "topic": "sensors",
+      "partition": 2,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8459
+    },
+    {
+      "topic": "sensors",
+      "partition": 3,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8479
+    },
+    {
+      "topic": "sensors",
+      "partition": 4,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 7919
+    },
+    {
+      "topic": "sensors",
+      "partition": 5,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8409
+    },
+    {
+      "topic": "shipments",
+      "partition": 0,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8369
+    },
+    {
+      "topic": "shipments",
+      "partition": 1,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8189
+    },
+    {
+      "topic": "shipments",
+      "partition": 2,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8399
+    },
+    {
+      "topic": "shipments",
+      "partition": 3,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8889
+    },
+    {
+      "topic": "shipments",
+      "partition": 4,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8269
+    },
+    {
+      "topic": "shipments",
+      "partition": 5,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 7879
+    },
+    {
+      "topic": "users",
+      "partition": 0,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8579
+    },
+    {
+      "topic": "users",
+      "partition": 1,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8119
+    },
+    {
+      "topic": "users",
+      "partition": 2,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8319
+    },
+    {
+      "topic": "users",
+      "partition": 3,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8299
+    },
+    {
+      "topic": "users",
+      "partition": 4,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8299
+    },
+    {
+      "topic": "users",
+      "partition": 5,
+      "source_start": 0,
+      "mapped": true,
+      "source_watermark": 8379
+    }
+  ],
+  "mapping_hash": "bcc8a132dff2b66b79ff08c47159223c3f9b559786b2cf799f3505cc2a47987e",
+  "database_integrity": {
+    "pages_checked": true,
+    "size_bytes": 50409472,
+    "sha256": "780a75892ccd790b5cbaf9355dcb1117d4bb9eac798f11e3bad19493d666894b"
+  },
+  "ack_policy_observation": {
+    "recorded": true,
+    "policy": "strict"
+  },
+  "target_durability_baseline": {
+    "deployment_id": "62285d4a-d421-448e-8d12-2dc6e7018d50",
+    "kafka_cluster_id": "kubemq",
+    "observed_at": "2026-10-04T14:09:38.630736884Z",
+    "nodes": {
+      "1": {
+        "kafka_address": "kubemq-0.kubemq.kubemq.svc.cluster.local:9092",
+        "data_volume_id": "7dbf9d9d-8807-4179-8dad-ee1f1f818c2a",
+        "boot_id": "90ca5260-fd7c-43d7-b24e-f61e138e9c66",
+        "engine_incarnation_id": "d25ecf75-681d-4b17-a9fa-fb2fc40a7d43",
+        "ack_policy": "strict"
+      },
+      "2": {
+        "kafka_address": "kubemq-1.kubemq.kubemq.svc.cluster.local:9092",
+        "data_volume_id": "ae2e9fd0-965f-4315-908d-3af3ce1c2048",
+        "boot_id": "03539725-a5c7-4f0b-888a-224edd872602",
+        "engine_incarnation_id": "ec49c39b-2148-4e82-ae8c-d645e74e62b7",
+        "ack_policy": "strict"
+      },
+      "3": {
+        "kafka_address": "kubemq-2.kubemq.kubemq.svc.cluster.local:9092",
+        "data_volume_id": "a4b76252-56c3-4e6f-906d-716cca5d95ae",
+        "boot_id": "4499c9d7-8964-413a-b534-e809f89ddf22",
+        "engine_incarnation_id": "1b7c3e1e-c941-442a-bdda-4e9b3a0a7934",
+        "ack_policy": "strict"
+      }
+    }
+  },
+  "verification": {
+    "status": "checkpoint_consistent",
+    "evidence": {
+      "plan_hash": "afdc5c6cb67e7a6e2656b1ccddc6aeef7d8d849087eff0c21c20b911a78b7b7b",
+      "mapping_hash": "bcc8a132dff2b66b79ff08c47159223c3f9b559786b2cf799f3505cc2a47987e",
+      "observed_at": "2026-10-04T14:10:57.449073178Z",
+      "partitions": [
+        {
+          "topic": "audit",
+          "partition": 0,
+          "source_start": 0,
+          "verified_through": 8309,
+          "mapped_records": 8310,
+          "record_bytes_verified": 9056055,
+          "source_end_at_observation": 8310,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8310,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "audit",
+          "partition": 1,
+          "source_start": 0,
+          "verified_through": 8119,
+          "mapped_records": 8120,
+          "record_bytes_verified": 8848989,
+          "source_end_at_observation": 8120,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8120,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "audit",
+          "partition": 2,
+          "source_start": 0,
+          "verified_through": 8249,
+          "mapped_records": 8250,
+          "record_bytes_verified": 8990665,
+          "source_end_at_observation": 8250,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8250,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "audit",
+          "partition": 3,
+          "source_start": 0,
+          "verified_through": 8429,
+          "mapped_records": 8430,
+          "record_bytes_verified": 9186817,
+          "source_end_at_observation": 8430,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8430,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "audit",
+          "partition": 4,
+          "source_start": 0,
+          "verified_through": 8519,
+          "mapped_records": 8520,
+          "record_bytes_verified": 9284912,
+          "source_end_at_observation": 8520,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8520,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "audit",
+          "partition": 5,
+          "source_start": 0,
+          "verified_through": 8369,
+          "mapped_records": 8370,
+          "record_bytes_verified": 9121452,
+          "source_end_at_observation": 8370,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8370,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "clicks",
+          "partition": 0,
+          "source_start": 0,
+          "verified_through": 8179,
+          "mapped_records": 8180,
+          "record_bytes_verified": 8930747,
+          "source_end_at_observation": 8180,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8180,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "clicks",
+          "partition": 1,
+          "source_start": 0,
+          "verified_through": 7939,
+          "mapped_records": 7940,
+          "record_bytes_verified": 8668715,
+          "source_end_at_observation": 7940,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 7940,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "clicks",
+          "partition": 2,
+          "source_start": 0,
+          "verified_through": 8559,
+          "mapped_records": 8560,
+          "record_bytes_verified": 9345618,
+          "source_end_at_observation": 8560,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8560,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "clicks",
+          "partition": 3,
+          "source_start": 0,
+          "verified_through": 8909,
+          "mapped_records": 8910,
+          "record_bytes_verified": 9727731,
+          "source_end_at_observation": 8910,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8910,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "clicks",
+          "partition": 4,
+          "source_start": 0,
+          "verified_through": 7979,
+          "mapped_records": 7980,
+          "record_bytes_verified": 8712391,
+          "source_end_at_observation": 7980,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 7980,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "clicks",
+          "partition": 5,
+          "source_start": 0,
+          "verified_through": 8429,
+          "mapped_records": 8430,
+          "record_bytes_verified": 9203688,
+          "source_end_at_observation": 8430,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8430,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "inventory",
+          "partition": 0,
+          "source_start": 0,
+          "verified_through": 8799,
+          "mapped_records": 8800,
+          "record_bytes_verified": 9660458,
+          "source_end_at_observation": 8800,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8800,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "inventory",
+          "partition": 1,
+          "source_start": 0,
+          "verified_through": 8229,
+          "mapped_records": 8230,
+          "record_bytes_verified": 9034721,
+          "source_end_at_observation": 8230,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8230,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "inventory",
+          "partition": 2,
+          "source_start": 0,
+          "verified_through": 8239,
+          "mapped_records": 8240,
+          "record_bytes_verified": 9045706,
+          "source_end_at_observation": 8240,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8240,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "inventory",
+          "partition": 3,
+          "source_start": 0,
+          "verified_through": 7969,
+          "mapped_records": 7970,
+          "record_bytes_verified": 8749288,
+          "source_end_at_observation": 7970,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 7970,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "inventory",
+          "partition": 4,
+          "source_start": 0,
+          "verified_through": 8849,
+          "mapped_records": 8850,
+          "record_bytes_verified": 9715319,
+          "source_end_at_observation": 8850,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8850,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "inventory",
+          "partition": 5,
+          "source_start": 0,
+          "verified_through": 7909,
+          "mapped_records": 7910,
+          "record_bytes_verified": 8683398,
+          "source_end_at_observation": 7910,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 7910,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "invoices",
+          "partition": 0,
+          "source_start": 0,
+          "verified_through": 8539,
+          "mapped_records": 8540,
+          "record_bytes_verified": 9357934,
+          "source_end_at_observation": 8540,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8540,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "invoices",
+          "partition": 1,
+          "source_start": 0,
+          "verified_through": 7819,
+          "mapped_records": 7820,
+          "record_bytes_verified": 8568993,
+          "source_end_at_observation": 7820,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 7820,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "invoices",
+          "partition": 2,
+          "source_start": 0,
+          "verified_through": 8389,
+          "mapped_records": 8390,
+          "record_bytes_verified": 9193584,
+          "source_end_at_observation": 8390,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8390,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "invoices",
+          "partition": 3,
+          "source_start": 0,
+          "verified_through": 7919,
+          "mapped_records": 7920,
+          "record_bytes_verified": 8678541,
+          "source_end_at_observation": 7920,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 7920,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "invoices",
+          "partition": 4,
+          "source_start": 0,
+          "verified_through": 8829,
+          "mapped_records": 8830,
+          "record_bytes_verified": 9675729,
+          "source_end_at_observation": 8830,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8830,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "invoices",
+          "partition": 5,
+          "source_start": 0,
+          "verified_through": 8499,
+          "mapped_records": 8500,
+          "record_bytes_verified": 9314109,
+          "source_end_at_observation": 8500,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8500,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "notifications",
+          "partition": 0,
+          "source_start": 0,
+          "verified_through": 8669,
+          "mapped_records": 8670,
+          "record_bytes_verified": 9587115,
+          "source_end_at_observation": 8670,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8670,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "notifications",
+          "partition": 1,
+          "source_start": 0,
+          "verified_through": 8599,
+          "mapped_records": 8600,
+          "record_bytes_verified": 9509699,
+          "source_end_at_observation": 8600,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8600,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "notifications",
+          "partition": 2,
+          "source_start": 0,
+          "verified_through": 8269,
+          "mapped_records": 8270,
+          "record_bytes_verified": 9144779,
+          "source_end_at_observation": 8270,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8270,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "notifications",
+          "partition": 3,
+          "source_start": 0,
+          "verified_through": 7639,
+          "mapped_records": 7640,
+          "record_bytes_verified": 8448121,
+          "source_end_at_observation": 7640,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 7640,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "notifications",
+          "partition": 4,
+          "source_start": 0,
+          "verified_through": 8619,
+          "mapped_records": 8620,
+          "record_bytes_verified": 9531793,
+          "source_end_at_observation": 8620,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8620,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "notifications",
+          "partition": 5,
+          "source_start": 0,
+          "verified_through": 8199,
+          "mapped_records": 8200,
+          "record_bytes_verified": 9067383,
+          "source_end_at_observation": 8200,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8200,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "orders",
+          "partition": 0,
+          "source_start": 0,
+          "verified_through": 8659,
+          "mapped_records": 8660,
+          "record_bytes_verified": 9454777,
+          "source_end_at_observation": 8660,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8660,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "orders",
+          "partition": 1,
+          "source_start": 0,
+          "verified_through": 8319,
+          "mapped_records": 8320,
+          "record_bytes_verified": 9083592,
+          "source_end_at_observation": 8320,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8320,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "orders",
+          "partition": 2,
+          "source_start": 0,
+          "verified_through": 8439,
+          "mapped_records": 8440,
+          "record_bytes_verified": 9214622,
+          "source_end_at_observation": 8440,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8440,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "orders",
+          "partition": 3,
+          "source_start": 0,
+          "verified_through": 8019,
+          "mapped_records": 8020,
+          "record_bytes_verified": 8756074,
+          "source_end_at_observation": 8020,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8020,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "orders",
+          "partition": 4,
+          "source_start": 0,
+          "verified_through": 8409,
+          "mapped_records": 8410,
+          "record_bytes_verified": 9181856,
+          "source_end_at_observation": 8410,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8410,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "orders",
+          "partition": 5,
+          "source_start": 0,
+          "verified_through": 8149,
+          "mapped_records": 8150,
+          "record_bytes_verified": 8897969,
+          "source_end_at_observation": 8150,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8150,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "payments",
+          "partition": 0,
+          "source_start": 0,
+          "verified_through": 8359,
+          "mapped_records": 8360,
+          "record_bytes_verified": 9160705,
+          "source_end_at_observation": 8360,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8360,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "payments",
+          "partition": 1,
+          "source_start": 0,
+          "verified_through": 8499,
+          "mapped_records": 8500,
+          "record_bytes_verified": 9314100,
+          "source_end_at_observation": 8500,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8500,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "payments",
+          "partition": 2,
+          "source_start": 0,
+          "verified_through": 7809,
+          "mapped_records": 7810,
+          "record_bytes_verified": 8558024,
+          "source_end_at_observation": 7810,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 7810,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "payments",
+          "partition": 3,
+          "source_start": 0,
+          "verified_through": 8099,
+          "mapped_records": 8100,
+          "record_bytes_verified": 8875800,
+          "source_end_at_observation": 8100,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8100,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "payments",
+          "partition": 4,
+          "source_start": 0,
+          "verified_through": 8309,
+          "mapped_records": 8310,
+          "record_bytes_verified": 9105918,
+          "source_end_at_observation": 8310,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8310,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "payments",
+          "partition": 5,
+          "source_start": 0,
+          "verified_through": 8919,
+          "mapped_records": 8920,
+          "record_bytes_verified": 9774343,
+          "source_end_at_observation": 8920,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8920,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "sensors",
+          "partition": 0,
+          "source_start": 0,
+          "verified_through": 8719,
+          "mapped_records": 8720,
+          "record_bytes_verified": 9537721,
+          "source_end_at_observation": 8720,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8720,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "sensors",
+          "partition": 1,
+          "source_start": 0,
+          "verified_through": 8009,
+          "mapped_records": 8010,
+          "record_bytes_verified": 8761167,
+          "source_end_at_observation": 8010,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8010,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "sensors",
+          "partition": 2,
+          "source_start": 0,
+          "verified_through": 8459,
+          "mapped_records": 8460,
+          "record_bytes_verified": 9253376,
+          "source_end_at_observation": 8460,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8460,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "sensors",
+          "partition": 3,
+          "source_start": 0,
+          "verified_through": 8479,
+          "mapped_records": 8480,
+          "record_bytes_verified": 9275233,
+          "source_end_at_observation": 8480,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8480,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "sensors",
+          "partition": 4,
+          "source_start": 0,
+          "verified_through": 7919,
+          "mapped_records": 7920,
+          "record_bytes_verified": 8662711,
+          "source_end_at_observation": 7920,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 7920,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "sensors",
+          "partition": 5,
+          "source_start": 0,
+          "verified_through": 8409,
+          "mapped_records": 8410,
+          "record_bytes_verified": 9198682,
+          "source_end_at_observation": 8410,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8410,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "shipments",
+          "partition": 0,
+          "source_start": 0,
+          "verified_through": 8369,
+          "mapped_records": 8370,
+          "record_bytes_verified": 9188391,
+          "source_end_at_observation": 8370,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8370,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "shipments",
+          "partition": 1,
+          "source_start": 0,
+          "verified_through": 8189,
+          "mapped_records": 8190,
+          "record_bytes_verified": 8990815,
+          "source_end_at_observation": 8190,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8190,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "shipments",
+          "partition": 2,
+          "source_start": 0,
+          "verified_through": 8399,
+          "mapped_records": 8400,
+          "record_bytes_verified": 9221332,
+          "source_end_at_observation": 8400,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8400,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "shipments",
+          "partition": 3,
+          "source_start": 0,
+          "verified_through": 8889,
+          "mapped_records": 8890,
+          "record_bytes_verified": 9759254,
+          "source_end_at_observation": 8890,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8890,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "shipments",
+          "partition": 4,
+          "source_start": 0,
+          "verified_through": 8269,
+          "mapped_records": 8270,
+          "record_bytes_verified": 9078617,
+          "source_end_at_observation": 8270,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8270,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "shipments",
+          "partition": 5,
+          "source_start": 0,
+          "verified_through": 7879,
+          "mapped_records": 7880,
+          "record_bytes_verified": 8650481,
+          "source_end_at_observation": 7880,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 7880,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "users",
+          "partition": 0,
+          "source_start": 0,
+          "verified_through": 8579,
+          "mapped_records": 8580,
+          "record_bytes_verified": 9350285,
+          "source_end_at_observation": 8580,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8580,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "users",
+          "partition": 1,
+          "source_start": 0,
+          "verified_through": 8119,
+          "mapped_records": 8120,
+          "record_bytes_verified": 8849007,
+          "source_end_at_observation": 8120,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8120,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "users",
+          "partition": 2,
+          "source_start": 0,
+          "verified_through": 8319,
+          "mapped_records": 8320,
+          "record_bytes_verified": 9066961,
+          "source_end_at_observation": 8320,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8320,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "users",
+          "partition": 3,
+          "source_start": 0,
+          "verified_through": 8299,
+          "mapped_records": 8300,
+          "record_bytes_verified": 9045155,
+          "source_end_at_observation": 8300,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8300,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "users",
+          "partition": 4,
+          "source_start": 0,
+          "verified_through": 8299,
+          "mapped_records": 8300,
+          "record_bytes_verified": 9045128,
+          "source_end_at_observation": 8300,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8300,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        },
+        {
+          "topic": "users",
+          "partition": 5,
+          "source_start": 0,
+          "verified_through": 8379,
+          "mapped_records": 8380,
+          "record_bytes_verified": 9132354,
+          "source_end_at_observation": 8380,
+          "target_start_at_observation": 0,
+          "target_end_at_observation": 8380,
+          "unmapped_target_records": 0,
+          "unverified_target_prefix": false,
+          "unverified_target_tail": false,
+          "caught_up_at_observation": true
+        }
+      ]
+    }
+  },
+  "live_clusters_rechecked": false
+}

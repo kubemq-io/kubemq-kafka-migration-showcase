@@ -1,0 +1,24 @@
+# Copy to terraform.tfvars and edit. Never commit terraform.tfvars.
+project_id = "my-gcp-project"
+region     = "europe-west1"
+zone       = "europe-west1-b"
+
+# operator_cidr is written to operator.auto.tfvars by scripts/operator-cidr.sh.
+# Set it here only if you want to override that file.
+# operator_cidr = "203.0.113.7/32"
+
+# kafka_version and kafka_sha512 are passed by `make infra-up` from versions.env.
+# Set them here only when running terraform directly:
+# kafka_sha512  = "<sha512 of kafka_2.13-4.3.1.tgz>"
+
+use_spot            = false
+name_prefix         = "kmq-showcase"
+broker_machine_type = "n2-standard-8"
+node_machine_type   = "n2-standard-4"
+gke_regional        = false
+
+# Leave both empty to use `gcloud compute ssh`; set both for plain ssh.
+ssh_user            = ""
+ssh_public_key_path = ""
+
+kubemq_namespace = "kubemq"

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "goal": "evaluation",
+  "target": "kubernetes",
+  "name": "kubemq",
+  "image": "__KMQ_DEFAULT_SERVER_IMAGE__",
+  "kubernetes": {
+    "context": "__KUBE_CONTEXT__",
+    "namespace": "kubemq",
+    "chart": "",
+    "chart_version": "",
+    "operator_release": "kubemq-operator",
+    "operator_image": "",
+    "cluster_release": "kubemq",
+    "server_count": 3,
+    "storage_class": "standard-rwo",
+    "volume_size": "50Gi",
+    "license_secret": {
+      "name": "__LICENSE_SECRET__",
+      "key": "licenseKey",
+      "kind": "key"
+    },
+    "tls_secret": "__TLS_SECRET__",
+    "ca_file": "__CA_FILE__"
+  }
+}

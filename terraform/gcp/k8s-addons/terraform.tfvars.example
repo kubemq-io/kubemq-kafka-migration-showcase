@@ -1,0 +1,13 @@
+# Copy to terraform.tfvars and edit. Never commit terraform.tfvars.
+# `make addons-up` passes project_id, cluster_name and cluster_location from the infra
+# root's outputs; set them here only when running terraform directly:
+# project_id       = "my-gcp-project"
+# cluster_name     = "kmq-showcase-gke" # terraform -chdir=../infra output -raw cluster_name
+# cluster_location = "europe-west1-b"   # terraform -chdir=../infra output -raw cluster_location
+
+kubemq_namespace    = "kubemq"
+kubemq_release_name = "kubemq"
+
+# Exactly one of the two:
+kubemq_license_key = "<your KubeMQ license key>"
+# kubemq_license_secret_name = "my-existing-license-secret"

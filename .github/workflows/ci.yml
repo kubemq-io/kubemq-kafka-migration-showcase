@@ -1,0 +1,98 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  terraform-fmt:
+    name: terraform fmt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.x"
+      - run: terraform fmt -check -recursive -diff terraform
+
+  terraform-validate:
+    name: terraform validate (${{ matrix.root }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        root:
+          - terraform/gcp/infra
+          - terraform/gcp/k8s-addons
+          - terraform/aws/infra
+          - terraform/aws/k8s-addons
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.x"
+      - name: init (no backend) + validate
+        working-directory: ${{ matrix.root }}
+        run: |
+          terraform init -backend=false -input=false
+          terraform validate
+
+  shellcheck:
+    name: shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq shellcheck
+      - run: shellcheck --version
+      - run: shellcheck -x scripts/*.sh scripts/kafka/*.sh terraform/modules/*/wait-for-*.sh
+
+  go-seed:
+    name: go vet + build (tools/seed)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: tools/seed/go.mod
+          cache-dependency-path: tools/seed/go.sum
+      - working-directory: tools/seed
+        run: |
+          go mod verify
+          go vet ./...
+          GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o /dev/null .
+
+  links:
+    name: markdown links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress --max-concurrency 8 --timeout 20
+           
+            --exclude 'localhost' --exclude '127\.0\.0\.1'
+            './README.md' './docs/**/*.md' './prompts/**/*.md' './kubemq/**/*.md' './examples/**/*.md'
+          fail: true
+
+  leak-scan:
+    name: leak-scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: scripts/leak-scan.sh
+
+  gitleaks:
+    name: gitleaks (tree and history)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

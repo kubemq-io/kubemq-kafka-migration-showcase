@@ -1,0 +1,113 @@
+{
+  "source_profile": "__FILLED_BY_BOOTSTRAP__",
+  "target_profile": "__FILLED_BY_BOOTSTRAP__",
+  "source_profile_hash": "",
+  "target_profile_hash": "",
+  "topics": [
+    "orders",
+    "payments",
+    "inventory",
+    "shipments",
+    "users",
+    "clicks",
+    "notifications",
+    "audit",
+    "sensors",
+    "invoices"
+  ],
+  "groups": [
+    "analytics",
+    "billing",
+    "archiver"
+  ],
+  "target": {
+    "kubernetes_context": "__FILLED_BY_BOOTSTRAP__",
+    "namespace": "__FILLED_BY_BOOTSTRAP__",
+    "release": "__FILLED_BY_BOOTSTRAP__",
+    "worker_image": "__FILLED_BY_BOOTSTRAP__",
+    "server_image": "__FILLED_BY_BOOTSTRAP__",
+    "operator_image": "__FILLED_BY_BOOTSTRAP__",
+    "chart_version": "__FILLED_BY_BOOTSTRAP__"
+  },
+  "workload": {
+    "applications": [
+      {
+        "name": "showcase-consumer",
+        "revision": "git:0000000"
+      }
+    ],
+    "source_writers": [
+      "showcase-seeder"
+    ],
+    "offset_authority": "kafka-consumer-groups",
+    "semantics": {
+      "schema_registry": {
+        "status": "none",
+        "evidence_source": "showcase seeder produces plain JSON values with three string headers and no Schema Registry client; tools/seed/main.go inspected",
+        "observed_at": "2026-10-04T00:00:00Z",
+        "inspected_scope": [
+          "showcase-consumer",
+          "orders",
+          "payments",
+          "inventory",
+          "shipments",
+          "users",
+          "clicks",
+          "notifications",
+          "audit",
+          "sensors",
+          "invoices",
+          "analytics",
+          "billing",
+          "archiver"
+        ]
+      },
+      "streams_state": {
+        "status": "none",
+        "evidence_source": "no Kafka Streams application exists in this showcase; the only consumers are the seeder's three groups, which commit offsets and keep no state stores",
+        "observed_at": "2026-10-04T00:00:00Z",
+        "inspected_scope": [
+          "showcase-consumer",
+          "orders",
+          "payments",
+          "inventory",
+          "shipments",
+          "users",
+          "clicks",
+          "notifications",
+          "audit",
+          "sensors",
+          "invoices",
+          "analytics",
+          "billing",
+          "archiver"
+        ]
+      },
+      "transactions": {
+        "status": "none",
+        "evidence_source": "the showcase seeder is a non-transactional producer (no transactional id, no idempotent-producer transactions); tools/seed/main.go inspected",
+        "observed_at": "2026-10-04T00:00:00Z",
+        "inspected_scope": [
+          "showcase-consumer",
+          "orders",
+          "payments",
+          "inventory",
+          "shipments",
+          "users",
+          "clicks",
+          "notifications",
+          "audit",
+          "sensors",
+          "invoices",
+          "analytics",
+          "billing",
+          "archiver"
+        ]
+      }
+    },
+    "data_bytes": 536870912,
+    "write_bytes_per_second": 0,
+    "max_write_pause_seconds": 600,
+    "recovery_policy": "pause-and-recover; no automatic rollback to the source after target-only writes; this showcase stops after replicate, verify and report and performs no cutover"
+  }
+}

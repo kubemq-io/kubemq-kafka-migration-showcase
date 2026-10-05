@@ -1,0 +1,52 @@
+#cloud-config
+# Rendered by Terraform. Node setup runs on every boot via kafka-showcase-setup.service.
+package_update: false
+
+write_files:
+  - path: /etc/kafka-showcase/node.env
+    permissions: "0644"
+    content: |
+      ROLE=${role}
+%{ if role == "broker" ~}
+      NODE_ID=${node_id}
+%{ endif ~}
+      CLUSTER_ID=${cluster_id}
+      INTERNAL_IP=${internal_ip}
+      EXTERNAL_IP=${external_ip}
+      VOTERS=${voters}
+      KAFKA_VERSION=${kafka_version}
+      KAFKA_SHA512=${kafka_sha512}
+      NVME_MODEL_REGEX=${nvme_model_regex}
+      MOUNT_NVME=${mount_nvme}
+
+  - path: /opt/kafka-showcase/bootstrap-node.sh
+    permissions: "0755"
+    content: |
+      ${indent(6, bootstrap_script)}
+
+  - path: /opt/kafka-showcase/configure-broker.sh
+    permissions: "0755"
+    content: |
+      ${indent(6, configure_script)}
+
+  - path: /etc/systemd/system/kafka-showcase-setup.service
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Kafka showcase node setup (idempotent, every boot; configure-broker is a no-op on the driver)
+      After=network-online.target
+      Wants=network-online.target
+
+      [Service]
+      Type=oneshot
+      RemainAfterExit=yes
+      EnvironmentFile=/etc/kafka-showcase/node.env
+      ExecStart=/opt/kafka-showcase/bootstrap-node.sh
+      ExecStart=/opt/kafka-showcase/configure-broker.sh
+
+      [Install]
+      WantedBy=multi-user.target
+
+runcmd:
+  - systemctl daemon-reload
+  - systemctl enable --now kafka-showcase-setup.service
