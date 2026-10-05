@@ -1,0 +1,17 @@
+# leak-scan allowlist — one extended regex per line; a scan hit whose full
+# "path:line:text" matches any of these is ignored. Add an entry ONLY for a value that
+# is deliberately public and documented. Keep a comment above each entry saying why.
+
+# The public KubeMQ images that `kmq deploy prepare` pins (documented in docs/).
+europe-docker\.pkg\.dev/kubemq/public/
+europe-docker\.pkg\.dev/kubemq/images/kmq
+
+# RFC 5737 documentation address ranges used in examples (never real operator IPs).
+\b203\.0\.113\.[0-9]{1,3}/32\b
+\b198\.51\.100\.[0-9]{1,3}/32\b
+\b192\.0\.2\.[0-9]{1,3}/32\b
+
+# Public contact / bot addresses that are supposed to be in a public repo.
+@kubemq\.io\b
+@users\.noreply\.github\.com\b
+noreply@github\.com\b

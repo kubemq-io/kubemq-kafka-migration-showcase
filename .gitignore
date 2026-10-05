@@ -1,1 +1,36 @@
-/.license.txt
+# run state written by the scripts (addresses, seed binary, kubeconfig, logs)
+.rig/
+
+# terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+!*.tfvars.json.example
+*.auto.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# credentials and cluster access
+kubeconfig*
+*.pem
+*.key
+*.ip
+*.license.txt
+
+# migration run artifacts (the whole directory is written by the prompts)
+/migration/
+recipe.json
+
+# logs, editors, OS
+*.log
+.idea/
+.vscode/
+.DS_Store
